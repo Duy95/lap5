@@ -1,15 +1,37 @@
-const users = [
-  { name: "User1", age: 25 },
-  { name: "User2", age: 20 },
-  { name: "User3", age: 22 },
-  { name: "User4", age: 30 },
-  { name: "User5", age: 16 },
+let Students = [
+  {
+    name: "Ti",
+    age: "20",
+    address: "HO CHI MINH",
+    email: "Ti@gmail.com",
+  },
+  {
+    name: "Teo",
+    age: "21",
+    address: "Ha Noi",
+    email: "teo@gmail.com",
+  },
+  {
+    name: "To",
+    age: "23",
+    address: "DA NANG",
+    email: "To@gmail.com",
+  },
+  {
+    name: "Tin",
+    age: "24",
+    address: "DONG NAI",
+    email: "Tin@gmail.com",
+  },
+
+  table_data = [(student["name"], student["age"], student["address"], student["email"],)
+   for student in students]
+headers = ["name", "age", "address", "email"]
+
+let jsonStudent = JSON.stringify(Students);
+console.log(jsonStudent);
+let Students2 = JSON.parse(jsonStudent);
+console.log(Students2);
+
 ];
 
-const filterUsersByAge = (userlist,18,30) => {
-    return userlist.filter(users => users.age => 18 && users.age <= 30)
-
-};
-
-const filteredUsers = filterUsersByAge(users, 18, 30);
-console.log(filteredUsers);
